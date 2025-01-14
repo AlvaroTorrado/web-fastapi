@@ -30,19 +30,19 @@ nav .menu {
     list-style: none;
     padding: 0;
     margin: 0;
-    background-color: #333;
+    background-color: white; /* Fondo blanco */
     border-radius: 10px;
     position: absolute;
     top: 50px; /* Ajustar la posición del menú debajo del botón */
     right: 0;
-    width: 200px; /* Ancho del menú */
+    width: 370px; /* Ancho del menú */
     display: none; /* Ocultamos el menú por defecto */
     flex-direction: column; /* Asegura que los elementos estén en columna */
 }
 
 nav .menu li {
     padding: 10px;
-    border-bottom: 1px solid #444;
+    border-bottom: 1px solid gray; /* Línea divisoria entre elementos */
 }
 
 nav .menu li:last-child {
@@ -51,13 +51,13 @@ nav .menu li:last-child {
 
 nav .menu a {
     text-decoration: none;
-    color: white;
+    color: rgb(8, 8, 8); /* Color del texto */
     font-size: 1rem;
     display: block;
 }
 
 nav .menu a:hover {
-    background-color: #555;
+    background-color: #555; /* Color de fondo al pasar por encima */
 }
 
 /* Cuando el menú está activo, lo mostramos */
@@ -73,8 +73,8 @@ body {
 footer {
     text-align: center;
     padding-top: 40px; /* Puedes ajustar esto según sea necesario */
-    background-color: #1d1616;
-    color: white;
+    background-color: #1d1616; /* Color de fondo del footer */
+    color: white; /* Color del texto del footer */
     margin-top: auto;
     width: 100%;
     padding-bottom: 40px; /* Agrega un poco de espacio al final */

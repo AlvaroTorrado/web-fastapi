@@ -1,52 +1,55 @@
-body {
-    font-family: 'Arial', sans-serif;
-    margin: 0;
-    padding: 0;
-    color: #141414;
-    background-color: #141414;
-    background-repeat: no-repeat; /* Evita la repetición de la imagen */
-    background-position: center center; /* Centra la imagen en la pantalla */
-    height: 100vh; /* Asegura que el body ocupe toda la altura de la ventana */
-    background-size: cover; /* Asegura que la imagen cubra todo el body sin distorsionarse */
-    overflow-x: hidden;
-}
-
-
 header {
-    
-    color: rgb(10, 10, 10);
+    background-color: #1E8E3E; /* Color de fondo del header */
     text-align: center;
     padding: 1rem;
-    background-image: url('../img/bannerbalon.jpg');
+    background-image: url('../img/bannerbalonn.jpg');
     background-size: cover; /* Hace que la imagen cubra todo el header sin distorsionarse */
     background-position: center center; /* Centra la imagen en el header */
     background-repeat: no-repeat; /* Evita que la imagen se repita */
-    height: 100px; /* Ajusta la altura del header según sea necesario */
-    color: white; /* Asegura que el texto sea visible sobre la imagen */
+    height: 50px; /* Ajusta la altura del header según sea necesario */
+    color: white; /* Asegura que el texto sea visible sobre la imagen */ 
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center; /* Centra el texto dentro del header */
 }
 
- 
-
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: black; /* Color del texto de la página */
+    background-color: grey; /* Color de fondo de la página */
+    background-repeat: no-repeat; /* Evita la repetición de la imagen */
+    background-position: center center; /* Centra la imagen en la pantalla */
+    height: 100vh; /* Asegura que el body ocupe toda la altura de la ventana */
+    background-size: cover; /* Asegura que la imagen cubra todo el body sin distorsionarse */
+    overflow-x: hidden;
+} 
+.league {
+    display: flex; /* Usamos flexbox para alinear la imagen y el h2 en una fila */
+    align-items: center; /* Alinea la imagen y el h2 verticalmente */
+    justify-content: flex-start; /* Asegura que los elementos estén alineados a la izquierda */
+    margin-bottom: 20px; /* Añade algo de espacio entre cada conjunto de imagen y texto */
+}
 .league img {
-    width: 100%;
-    border-radius: 10px;
+    width: 500px; /* Ajusta el tamaño de la imagen */
+    height: auto; /* Mantén la proporción de la imagen */
+    margin-right: 10px; /* Espacio entre la imagen y el h2 */
 }
 
 .league h2 {
-    text-align: center;
-    margin-top: 0.5rem;
-    color: rgb(14, 13, 13);
+    margin: 100px; /* Elimina el margen por defecto */
+    color: black; /* Color del texto */
+    font-size: 1.5rem; /* Tamaño del texto */
+    line-height: 1; /* Evita el desalineado vertical */
 }
 
 footer {
     text-align: center;
     padding-top: 20px; /* Puedes ajustar esto según sea necesario */
-    background-color: #0f0f0f;
-    color: rgb(184, 40, 40);
+    background-color: #0f0f0f; /* Color de fondo del footer */
+    color: rgb(184, 40, 40); /* Color del texto del footer */
     margin-top: auto;
     width: 100%;
     padding-bottom: 20px; /* Agrega un poco de espacio al final */
@@ -60,4 +63,4 @@ footer {
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 1.5rem;
     flex-grow: 1;
-    }) */
+    }) 

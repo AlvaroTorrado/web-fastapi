@@ -2,29 +2,28 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f8f9fa;
-    color: #343a40;
+    background-color: orange;
+    color: orange; /*color del texto de la pagina */
     line-height: 1.6;
 }
 
 header {
-    background: #c52e00;
-    color: #fff;
-    padding: 1rem 0;
-    text-align: center;
+    background: #c52e00; /*color del header */
+    color: #fff; /*color del texto del header */
+    padding: 1rem 0; 
+    text-align: center; 
 }
 
 h1, h2, h3 {
-    margin-bottom: 1rem;
+    margin-bottom: 1rem; /*espacio entre los titulos y el contenido */
 }
 
 main {
-    padding: 2rem;
-    max-width: 960px;
-    margin: 0 auto;
-    background: #fff;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 2rem; /*espacio entre el contenido y los bordes de la pagina */
+    max-width: 1960px; /*ancho de la pagina */
+    margin: 0 auto; /*centra el contenido de la pagina */
+    border-radius: 5px; /*radio de las esquinas de la caja de la tabla */
+    box-shadow: 0 2px 5px orange; /*color de la sombra de la caja de la tabla */
 }
 
 footer {
@@ -42,27 +41,27 @@ table {
 }
 
 table thead {
-    background: #007bff;
-    color: #fff;
+    background: #00ff73;    /*color de las tablas fila de estadisticas */
+    color: #ca0909;     /*color de las tablas fila de estadisticas, el texto */
 }
 
 table th, table td {
     padding: 0.75rem;
     text-align: left;
-    border: 1px solid #dee2e6;
+    border: 1px solid black;          /*color de los bordes de las tablas */
 }
 
 table tbody tr:nth-child(even) {
-    background: #f8f9fa;
+    background: purple; /*color de las tablas de las clasificaciones pares*/
 }
 
 table tbody tr:hover {
-    background: #e9ecef;
+    background: yellow;  /*color al pasar por encima de las tablas de las clasificaciones */
 }
 
 /* Section Notes */
 section h3 {
-    color: #007bff;
+    color: pink; /*color de Notas */
     margin-top: 2rem;
 }
 
