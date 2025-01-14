@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Mi Página{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', path='css/bases.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', path='css/laliga.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', path='css/premierleague.css') }}">
+    {% block extra_css %}{% endblock %}
+</head>
+<body>
+    <header>
+        <nav>
+            <!-- Botón hamburguesa para abrir el menú -->
+            <div class="hamburger" onclick="document.querySelector('nav').classList.toggle('open')">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+    
+            <!-- Menú de navegación -->
+            <ul class="menu">
+                <li><a href="/">Home</a></li>
+                <li><a href="/laliga">LaLiga</a></li>
+                <li><a href="/premierleague">Premier League</a></li>
+            </ul>
+        </nav>
+        <h1>{% block header %}Ligas de Fútbol{% endblock %}</h1>
+    </header>
+    
+
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Ligas de Fútbol. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>

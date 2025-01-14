@@ -1,0 +1,71 @@
+/* Estilos para el contenedor del menú */
+nav {
+    position: fixed;
+    top: 20px; /* Distancia desde la parte superior */
+    right: 20px; /* Distancia desde el borde derecho */
+    z-index: 1000; /* Asegurarse de que esté encima de otros elementos */
+    width: 200px; /* Ancho del menú desplegable */
+}
+
+/* Estilos para el botón de hamburguesa */
+nav .hamburger {
+    display: block;
+    width: 35px;  /* Aumentamos el tamaño */
+    height: 30px; /* Aumentamos el tamaño */
+    position: relative;
+    background-color: transparent; /* Sin fondo */
+    cursor: pointer; /* Cambiar el cursor al pasar por encima */
+}
+
+nav .hamburger div {
+    width: 100%;
+    height: 5px; /* Aumentamos el grosor de las líneas */
+    background-color: #fff; /* Color blanco para las líneas */
+    margin: 6px 0;  /* Separa las líneas para mayor visibilidad */
+    transition: transform 0.3s ease;  /* Transición suave para los cambios */
+}
+
+/* Estilo para el menú desplegable */
+nav .menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    background-color: #333;
+    border-radius: 10px;
+    position: absolute;
+    top: 50px; /* Ajustar la posición del menú debajo del botón */
+    right: 0;
+    width: 200px; /* Ancho del menú */
+    display: none; /* Ocultamos el menú por defecto */
+    flex-direction: column; /* Asegura que los elementos estén en columna */
+}
+
+nav .menu li {
+    padding: 10px;
+    border-bottom: 1px solid #444;
+}
+
+nav .menu li:last-child {
+    border-bottom: none;
+}
+
+nav .menu a {
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+    display: block;
+}
+
+nav .menu a:hover {
+    background-color: #555;
+}
+
+/* Cuando el menú está activo, lo mostramos */
+nav.open .menu {
+    display: block;
+}
+
+/* Asegurarse que el cuerpo de la página no esté cubierto por el menú */
+body {
+    margin-right: 220px; /* Ajustar según el ancho del menú */
+}

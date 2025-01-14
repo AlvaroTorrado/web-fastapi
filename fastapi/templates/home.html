@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/css/home.css">
+    <title>Mi Página Bonita</title>
+</head>
+<body>
+    <header>
+        <h1>Ligas de Fútbol</h1>
+    </header>
+
+    <main>
+        <div class="league">
+            <a href="/laliga">
+                <img src="{{ url_for('static',path='IMG/laligaespañola.jpg') }}" alt="LaLiga Española">
+                <h2>LaLiga Española</h2>
+            </a>
+        </div>
+
+        <div class="league">
+            <a href="/premierleague">
+                <img src="{{ url_for('static',path='IMG/premierleague.jpg') }}" alt="Premier League">
+                <h2>Premier League</h2>
+            </a>
+        </div>
+        <!-- Agrega más ligas aquí -->
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Ligas de Fútbol. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>
