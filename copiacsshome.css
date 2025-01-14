@@ -29,7 +29,13 @@ header {
     text-align: center; /* Centra el texto dentro del header */
 }
 
- 
+main {
+    max-width: 1200px;
+    margin: 2rem auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
 
 .league img {
     width: 100%;
@@ -39,25 +45,15 @@ header {
 .league h2 {
     text-align: center;
     margin-top: 0.5rem;
-    color: rgb(14, 13, 13);
+    color: white;
 }
 
 footer {
     text-align: center;
-    padding-top: 20px; /* Puedes ajustar esto según sea necesario */
-    background-color: #0f0f0f;
-    color: rgb(184, 40, 40);
+    padding-top: 40px; /* Puedes ajustar esto según sea necesario */
+    background-color: #1d1616;
+    color: white;
     margin-top: auto;
     width: 100%;
-    padding-bottom: 20px; /* Agrega un poco de espacio al final */
-    margin-top: 5%;
+    padding-bottom: 40px; /* Agrega un poco de espacio al final */
 }
-
-/* (main {
-    max-width: 1200px;
-    margin: 2rem auto;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 1.5rem;
-    flex-grow: 1;
-    }) */

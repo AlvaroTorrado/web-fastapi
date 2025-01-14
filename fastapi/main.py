@@ -19,3 +19,19 @@ async def laliga(request: Request):
 @app.get("/premierleague", response_class=HTMLResponse)
 async def premier(request: Request):
     return templates.TemplateResponse("premierleague.html", {"request": request})
+
+@app.get("/bundesliga", response_class=HTMLResponse)
+async def bundesliga(request: Request):
+    return templates.TemplateResponse("bundesliga.html", {"request": request})
+
+@app.get("/seriea", response_class=HTMLResponse)
+async def seriea(request: Request):
+    return templates.TemplateResponse("seriea.html", {"request": request})
+
+@app.get("/mls", response_class=HTMLResponse)
+async def mls(request: Request):
+    return templates.TemplateResponse("mls.html", {"request": request})
+
+@app.get("/ligue1", response_class=HTMLResponse)
+async def ligue1(request: Request):
+    return templates.TemplateResponse("ligue1.html", {"request": request})

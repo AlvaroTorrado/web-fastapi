@@ -6,7 +6,8 @@
     <title>{% block title %}Mi Página{% endblock %}</title>
     <link rel="stylesheet" href="{{ url_for('static', path='css/bases.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', path='css/laliga.css') }}">
-    <link rel="stylesheet" href="{{ url_for('static', path='css/premierleague.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', path='css/home.css') }}">
+    
     {% block extra_css %}{% endblock %}
 </head>
 <body>
@@ -24,6 +25,10 @@
                 <li><a href="/">Home</a></li>
                 <li><a href="/laliga">LaLiga</a></li>
                 <li><a href="/premierleague">Premier League</a></li>
+                <li><a href="/bundesliga">Bundesliga</a></li>
+                <li><a href="/seriea">SerieA</a></li>
+                <li><a href="/mls">MLS</a></li>
+                <li><a href="/ligue1">Ligue1</a></li>
             </ul>
         </nav>
         <h1>{% block header %}Ligas de Fútbol{% endblock %}</h1>
@@ -35,7 +40,7 @@
     </main>
 
     <footer>
-        <p>&copy; 2025 Ligas de Fútbol. Todos los derechos reservados.</p>
+        <p>&copy; 2025 Ligas de Fútbol. Todos los derechos reservados. Álvaro Torrado.</p>
     </footer>
 </body>
 </html>

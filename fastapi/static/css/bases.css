@@ -69,3 +69,13 @@ nav.open .menu {
 body {
     margin-right: 220px; /* Ajustar según el ancho del menú */
 }
+
+footer {
+    text-align: center;
+    padding-top: 40px; /* Puedes ajustar esto según sea necesario */
+    background-color: #1d1616;
+    color: white;
+    margin-top: auto;
+    width: 100%;
+    padding-bottom: 40px; /* Agrega un poco de espacio al final */
+}

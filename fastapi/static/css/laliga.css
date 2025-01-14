@@ -8,7 +8,7 @@ body {
 }
 
 header {
-    background: #007bff;
+    background: #c52e00;
     color: #fff;
     padding: 1rem 0;
     text-align: center;
@@ -32,7 +32,6 @@ footer {
     padding: 1rem 0;
     background: #343a40;
     color: #fff;
-    margin-top: 2rem;
 }
 
 /* Table Styles */

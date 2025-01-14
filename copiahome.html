@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/css/home.css">
+    <title>Mi Página Bonita</title>
+</head>
+<body>
+    <header>
+        <h1>Ligas de Fútbol</h1>
+    </header>
+
+    <main>
+        <div class="league">
+            <a href="/laliga">
+                <img src="{{ url_for('static',path='IMG/laligaespañola.jpg') }}" alt="LaLiga Española"> 
+            </a>
+            <h2>LaLiga Española</h2>
+        </div>
+
+        <div class="league">
+            <a href="/premierleague">
+                <img src="{{ url_for('static',path='IMG/premierleaguee.jpg') }}" alt="Premier League">
+            </a>
+            <h2>Premier League</h2>
+        </div>
+        
+        <div class="league">
+            <a href="/bundesliga">
+                <img src="{{ url_for('static',path='IMG/bundesliga.jpg') }}" alt="Bundesliga">
+            </a>
+            <h2>Bundesliga</h2>
+        </div>
+
+        <div class="league">
+            <a href="/seriea">
+                <img src="{{ url_for('static',path='IMG/seriea.jpg') }}" alt="SerieA">
+            </a>
+            <h2>SerieA</h2>
+        </div>
+
+        <div class="league">
+            <a href="/mls">
+                <img src="{{ url_for('static',path='IMG/mls.jpg') }}" alt="MLS">
+            </a>
+            <h2>MLS</h2>
+        </div>
+
+        <div class="league">
+            <a href="/ligue1">
+                <img src="{{ url_for('static',path='IMG/ligue1.jpg') }}" alt="Ligue1">
+            </a>
+            <h2>Ligue1</h2>
+        </div>
+        <!-- Agrega más ligas aquí -->
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Ligas de Fútbol. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>
