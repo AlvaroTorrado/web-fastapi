@@ -1,0 +1,47 @@
+/* Estilo para el contenedor del header */
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /*background-color: #f8f9fa;  Color de fondo claro */
+    padding: 10px 20px; /* Espaciado interno */
+    /* border-bottom: 2px solid #ddd; Línea inferior para separar */
+    align-content: right;
+}
+
+/* Estilo para el título */
+.header-container .titulo {
+    font-size: 1.8rem;
+    color: #333; /* Color del texto */
+    margin: 0; /* Elimina márgenes */
+}
+/* Estilo para el botón */
+.header-container .btn {
+    font-size: 1rem;
+    padding: 8px 16px; /* Espaciado interno del botón */
+    background-color: red; /* Color de fondo azul */
+    color: #fff; /* Color del texto */
+    border: none; /* Sin bordes */
+    border-radius: 5px; /* Bordes redondeados */
+    text-decoration: none; /* Quitar subrayado */
+    transition: background-color 0.3s ease; /* Animación suave */
+}
+
+/* Hover y enfoque del botón */
+.header-container .btn:hover,
+.header-container .btn:focus {
+    background-color: #0056b3; /* Azul más oscuro al pasar el mouse */
+    text-decoration: none; /* Quitar subrayado */
+}
+
+/* Responsive: Ajuste para pantallas pequeñas */
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column; /* Coloca los elementos en columna */
+        align-items: flex-start; /* Alinea a la izquierda */
+    }
+
+    .header-container .btn {
+        margin-top: 10px; /* Espaciado entre título y botón */
+    }
+}

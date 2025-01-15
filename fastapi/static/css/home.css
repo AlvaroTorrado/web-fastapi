@@ -1,8 +1,13 @@
 header {
-    background-color: #1E8E3E; /* Color de fondo del header */
-    text-align: center;
+    /*background: #c52e00; color del header */
+    color: #fff; /*color del texto del header */
+    padding: 1rem 0; 
+    text-align: center; 
+    background-image: url('../img/background.jpg'); /*imagen de fondo del header */
+    background-size: cover;
+    /*background-color: #1E8E3E;  Color de fondo del header */
+    text-align: center; 
     padding: 1rem;
-    background-image: url('../img/bannerbalonn.jpg');
     background-size: cover; /* Hace que la imagen cubra todo el header sin distorsionarse */
     background-position: center center; /* Centra la imagen en el header */
     background-repeat: no-repeat; /* Evita que la imagen se repita */
@@ -10,8 +15,13 @@ header {
     color: white; /* Asegura que el texto sea visible sobre la imagen */ 
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: center; 
     text-align: center; /* Centra el texto dentro del header */
+    
+}
+
+.titulo{
+    color:white;
 }
 
 body {
@@ -19,7 +29,7 @@ body {
     margin: 0;
     padding: 0;
     color: black; /* Color del texto de la página */
-    background-color: grey; /* Color de fondo de la página */
+    /* background-color: grey; Color de fondo de la página */
     background-repeat: no-repeat; /* Evita la repetición de la imagen */
     background-position: center center; /* Centra la imagen en la pantalla */
     height: 100vh; /* Asegura que el body ocupe toda la altura de la ventana */

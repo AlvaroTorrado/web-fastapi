@@ -1,0 +1,32 @@
+{% extends "bases.html" %}
+
+{% block title %}Iniciar Sesión{% endblock %}
+
+{% block header %}
+<div class="header-container" style="display: flex; justify-content: space-between; align-items: center;">
+    <h1 class="titulologin">Iniciar Sesión</h1>
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="login-container">
+    <form method="POST" action="/login" style="display: flex; flex-direction: column;">
+        <!-- Campo para el correo electrónico -->
+        <div class="login-form-group">
+            <label for="email" class="login-label">Correo Electrónico:</label>
+            <input type="email" id="email" name="email" class="login-input" required placeholder="Ingresa tu correo electrónico">
+        </div>
+
+        <!-- Campo para la contraseña -->
+        <div class="login-form-group">
+            <label for="password" class="login-label">Contraseña:</label>
+            <input type="password" id="password" name="password" class="login-input" required placeholder="Ingresa tu contraseña">
+        </div>
+
+        <!-- Botón de enviar -->
+        <div>
+            <button type="submit" class="login-button">Iniciar Sesión</button>
+        </div>
+    </form>
+</div>
+{% endblock %}

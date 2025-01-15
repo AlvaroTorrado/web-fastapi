@@ -35,3 +35,7 @@ async def mls(request: Request):
 @app.get("/ligue1", response_class=HTMLResponse)
 async def ligue1(request: Request):
     return templates.TemplateResponse("ligue1.html", {"request": request})
+
+@app.get("/login", response_class=HTMLResponse)
+async def login(request: Request):
+    return templates.TemplateResponse("login.html", {"request": request})
