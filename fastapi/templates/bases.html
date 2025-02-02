@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="{{ url_for('static', path='css/boton.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', path='css/login.css') }}">
     
+    
     {% block extra_css %}{% endblock %}
 </head>
 <body>
@@ -31,6 +32,7 @@
                 <li><a href="/seriea">SerieA</a></li>
                 <li><a href="/mls">MLS</a></li>
                 <li><a href="/ligue1">Ligue1</a></li>
+                <li><a href="/jugadores">Jugadores</a></li>
             </ul>
         </nav>
         <h1>{% block header %}Ligas de Fútbol{% endblock %}</h1>

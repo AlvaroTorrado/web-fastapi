@@ -7,5 +7,5 @@ database = mysql.connector.connect(
     ssl_disabled = True,
     user = 'root',
     password = '1asir',
-    database = 'torrado'
+    database = 'Torrado'
 )

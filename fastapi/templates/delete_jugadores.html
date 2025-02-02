@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eliminar Jugador</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Eliminar Jugador</h1>
+
+        <!-- Mensaje dinámico si se elimina correctamente -->
+        {% if message %}
+            <p style="color: red;">{{ message }}</p>
+        {% endif %}
+
+        <!-- Formulario para eliminar un jugador -->
+        <form action="/jugadores/delete" method="post">
+            <label for="nombre">Nombre del Jugador:</label>
+            <input type="text" id="nombre" name="nombre" required>
+            <button type="submit">Eliminar</button>
+        </form>
+
+        <br>
+        <a href="/jugadores">Volver a la lista de jugadores</a>
+    </div>
+</body>
+</html>

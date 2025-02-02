@@ -1,7 +1,13 @@
-from fastapi import FastAPI, Request
+from fastapi import FastAPI, Request,Form
 from fastapi.responses import HTMLResponse
 from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
+from data.database import database
+from typing import Annotated
+from typing import Union
+from data.modelo.jugador import Jugador
+from data.dao.dao_jugadores import DaoJugadores
+
 
 app = FastAPI()
 
@@ -39,3 +45,38 @@ async def ligue1(request: Request):
 @app.get("/login", response_class=HTMLResponse)
 async def login(request: Request):
     return templates.TemplateResponse("login.html", {"request": request})
+
+
+@app.get("/")
+def read_root():
+    return DaoJugadores().get_all(database)
+
+@app.get("/jugadores")
+def get_jugadores(request: Request, nombre: str = "usuario", otro: int = 1):
+    jugadores = DaoJugadores().get_all(database)
+    return templates.TemplateResponse(
+        "jugadores.html", 
+        {"request": request, "jugadores": jugadores}
+    )
+
+@app.post("/jugadores/add")
+def add_jugadores(request: Request, nombre: Annotated[str, Form()]):
+    dao = DaoJugadores()
+    dao.insert(database, nombre)
+    jugadores = DaoJugadores().get_all(database)  # Volver a cargar la lista de jugadores
+    return templates.TemplateResponse(
+        "jugadores.html", 
+        {"request": request, "jugadores": jugadores}
+    )
+
+@app.post("/jugadores/delete")
+def delete_jugadores(request: Request, nombre: Annotated[str, Form()]):
+    dao = DaoJugadores()
+    dao.delete(database, nombre)
+    jugadores = DaoJugadores().get_all(database)  # Volver a cargar la lista de jugadores después de eliminar
+    return templates.TemplateResponse(
+        "jugadores.html", 
+        {"request": request, "jugadores": jugadores, "message": f"Jugador '{nombre}' eliminado correctamente"}
+    )
+
+
