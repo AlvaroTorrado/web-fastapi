@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jugador Encontrado</title>
+    <link rel="stylesheet" href="{{ url_for('static', path='CSS/jugadores.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Jugador Encontrado</h1>
+        <h2>{{ jugador.nombre }}</h2> <!-- Mostrar el nombre del jugador -->
+        
+        <br>
+        <a href="/jugadores">Volver a la lista de jugadores</a>
+    </div>
+</body>
+</html>

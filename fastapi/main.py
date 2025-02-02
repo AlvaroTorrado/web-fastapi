@@ -79,4 +79,21 @@ def delete_jugadores(request: Request, nombre: Annotated[str, Form()]):
         {"request": request, "jugadores": jugadores, "message": f"Jugador '{nombre}' eliminado correctamente"}
     )
 
+@app.get("/jugadores/buscar")
+def buscar_jugador(request: Request, nombre: str):
+    # Intentamos encontrar el jugador en la base de datos
+    jugadores = DaoJugadores().get_all(database)
+    
+    # Filtrar el jugador que coincida con el nombre
+    jugador_encontrado = None
+    for jugador in jugadores:
+        if jugador.nombre.lower() == nombre.lower():  # Compara sin distinguir mayúsculas/minúsculas
+            jugador_encontrado = jugador
+            break
+    
+    if jugador_encontrado:
+        return templates.TemplateResponse("jugador_encontrado.html", {"request": request, "jugador": jugador_encontrado})
+    else:
+        return templates.TemplateResponse("jugadores.html", {"request": request, "jugadores": jugadores, "message": f"No se encontró al jugador '{nombre}'."})
+
 
